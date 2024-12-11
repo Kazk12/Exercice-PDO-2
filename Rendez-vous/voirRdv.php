@@ -66,7 +66,7 @@ try {
 
 <body>
 
-<a href="./create_user.php">Create a new patient</a>
+<a href="./liste-rdv.php">Voir tous les rendez-vous</a>
 
 <ol>
     
@@ -77,11 +77,11 @@ try {
 
 
 <!-- Button to show the edit form -->
-<button onclick="showEditForm()">Edit Patient</button>
+<button onclick="showEditForm()">Modifier le rendez-vous</button>
 
 <!-- Form to edit the patient's information -->
 <div id="editForm">
-    <h2>Edit Rdv Information</h2>
+    <h2>Modifier le rendez-vous</h2>
     <form action="modification_Rdv.php" method="POST">
         <input type="hidden" name="id" value="<?= $rdv['id'] ?>">
         
@@ -100,7 +100,7 @@ try {
 
         
 
-        <button type="submit">Update Patient</button>
+        <button type="submit">Mettre à jour les informations </button>
     </form>
 </div>
 

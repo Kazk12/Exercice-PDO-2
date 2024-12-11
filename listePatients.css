@@ -1,39 +1,80 @@
 /* Style global */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7fc;
+    background-color: #f4f7fc; /* Fond clair pour une bonne lisibilité */
     margin: 0;
     padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
-    height: 100vh;
+    align-items: center; /* Centrer tout le contenu */
+    justify-content: flex-start;
+    min-height: 100vh; /* Assure que le contenu prend toute la hauteur de la page */
 }
 
-/* Liens principaux */
-a {
+/* Liens de navigation en haut */
+.nav-links {
+    display: flex;
+    justify-content: center; /* Centrer les liens */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.nav-links a {
     text-decoration: none;
-    color: white;
-    background-color: #007bff;
+    color: #fff; /* Texte en blanc pour un bon contraste */
+    background-color: #007bff; /* Bleu dynamique */
     padding: 12px 20px;
     border-radius: 5px;
-    margin: 10px 0;
+    font-size: 1.1rem;
+    margin: 0 15px; /* Espacement entre les liens */
     display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animation fluide au survol */
+}
+
+/* Effet au survol */
+.nav-links a:hover {
+    background-color: #0056b3; /* Bleu plus foncé */
+    transform: scale(1.05); /* Légère augmentation de taille pour l'effet interactif */
+}
+
+/* Liens spécifiques pour la création et l'index */
+a[href='./create_user.php'] {
+    background-color: #28a745; /* Vert pour la création */
+}
+
+a[href='./index.php'] {
+    background-color: #17a2b8; /* Bleu pour l'index */
+}
+
+/* Formulaire de recherche */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px; /* Espacement entre le formulaire et la liste des patients */
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 1.2rem;
-    text-align: center;
 }
 
-a:hover {
+button[type="submit"]:hover {
     background-color: #0056b3;
-}
-
-/* Titre principal */
-h1 {
-    color: #333;
-    font-size: 2rem;
-    margin-bottom: 20px;
 }
 
 /* Liste des patients */
@@ -41,43 +82,57 @@ ol {
     padding-left: 20px;
     font-size: 1.2rem;
     color: #333;
+    list-style-type: none;
+    width: 100%;
+    max-width: 800px; /* Limiter la largeur pour une meilleure lisibilité */
 }
 
+/* Style des éléments de la liste */
 ol li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 /* Style des liens de "Voir le profil" */
 ol a {
     color: #ffffff; /* Texte en blanc */
-    text-decoration: none;
+    background-color: #007bff;
+    padding: 5px 10px;
+    border-radius: 5px;
     font-size: 1rem;
     margin-left: 10px;
-    transition: color 0.3s ease;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-/* Changement de couleur au survol */
+/* Effet de survol pour les liens de "Voir le profil" */
 ol a:hover {
-    color: #ff4500; /* Change la couleur en orange vif au survol */
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
-/* Style des liens de création de patient */
-a[href='./create_user.php'] {
-    background-color: #28a745;
-    margin-right: 10px;
+/* Formulaire de suppression de patient */
+form[action="./supprimerPatientEtRdv.php"] {
+    display: inline;
+    margin-left: 10px;
 }
 
-a[href='./index.php'] {
-    background-color: #17a2b8;
+/* Style pour le bouton de suppression */
+form input[type="submit"] {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Espacement entre les liens */
-a:hover {
-    opacity: 0.8;
+/* Effet au survol pour le bouton de suppression */
+form input[type="submit"]:hover {
+    background-color: #c82333;
 }
 
-/* Nouveau style pour les liens de "Voir le profil" */
-ol a {
-    font-weight: bold; /* Ajoute un peu de poids pour la lisibilité */
+/* Espacement entre les liens et autres éléments */
+a, form input[type="submit"], ol a {
+    margin-top: 10px;
 }
-

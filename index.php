@@ -1,10 +1,6 @@
-
 <?php
 
 require_once './utils/connect_db.php';
-
-
-
 
 $sql = "SELECT * FROM `patients`";
 
@@ -16,41 +12,47 @@ try {
     echo "Erreur lors de la requete : " . $error->getMessage();
 }
 
-
 ?>
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Gestion des Patients</title>
+    <link rel="stylesheet" href="style.css?v=1">
+
 </head>
 
 <body>
-    
 
-<a href="./create_user.php">Create a new patient</a>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <h1>Gestion des Patients</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./create_user.php">Créer un nouveau patient</a></li>
+                    <li><a href="./liste-patients.php">Voir tous les patients</a></li>
+                    <li><a href="./Rendez-vous/liste-rdv.php">Voir la liste des rendez-vous</a></li>
+                    <li><a href="./CreateUserAndRdv/ajout-patient-rendez-vous.php">Ajouter un patient et un rdv</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<a href="./liste-patients.php">Views all patients</a>
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Liste des Patients</h2>
 
-
-
-<a href="./Rendez-vous/liste-rdv.php">View all rdv</a>
-
-
-
-
-
-
-
-
-
-
-
+        <div class="links">
+            <a href="./create_user.php">Créer un nouveau patient</a>
+            <a href="./liste-patients.php">Voir tous les patients</a>
+            <a href="./Rendez-vous/liste-rdv.php">Voir la liste des rendez-vous</a>
+            <a href="./CreateUserAndRdv/ajout-patient-rendez-vous.php">Ajouter un patient et un rdv en même temps</a>
+        </div>
+    </div>
 
 </body>
 

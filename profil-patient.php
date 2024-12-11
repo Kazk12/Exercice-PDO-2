@@ -49,7 +49,7 @@ try {
 
 <body>
 
-<a href="./create_user.php">Create a new patient</a>
+<a href="./liste-patients.php">Revoir tous les patients</a>
 
 <ol>
     <li>Nom du patient : <?= $user['lastname'] ?> </li>
@@ -58,6 +58,47 @@ try {
     <li>Tel : <?= $user['phone'] ?> </li>
     <li>Email : <?= $user['mail'] ?> </li>
 </ol>
+
+
+
+
+
+<!-- Button to show the edit form -->
+<button onclick="showEditForm()">Modifier les informations de ce patient</button>
+
+<!-- Form to edit the patient's information -->
+<div id="editForm">
+    <h2>Edit Patient Information</h2>
+    <form action="modification-patient.php" method="POST">
+        <input type="hidden" name="id" value="<?= $user['id'] ?>">
+        
+        <label for="lastName">Nom :</label>
+        <input type="text" id="lastname" name="lastname" value="<?= $user['lastname'] ?>" required><br>
+
+        <label for="firstName">Prénom :</label>
+        <input type="text" id="firstname" name="firstname" value="<?= $user['firstname'] ?>" required><br>
+
+        <label for="birthdate">Date d'anniversaire:</label>
+        <input type="date" id="birthdate" name="birthdate" value="<?= $user['birthdate'] ?>" required><br>
+
+        <label for="phone">Téléphone:</label>
+        <input type="tel" id="phone" name="phone" value="<?= $user['phone'] ?>" required><br>
+
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="mail" value="<?= $user['mail'] ?>" required><br>
+
+        <button type="submit">Modifier les informations</button>
+    </form>
+</div>
+
+<script>
+    // Function to show the edit form
+    function showEditForm() {
+        var form = document.getElementById('editForm');
+        form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    }
+</script>
+
 
 
 <div>
@@ -76,43 +117,6 @@ try {
         }
     ?>
 </div>
-
-
-<!-- Button to show the edit form -->
-<button onclick="showEditForm()">Edit Patient</button>
-
-<!-- Form to edit the patient's information -->
-<div id="editForm">
-    <h2>Edit Patient Information</h2>
-    <form action="modification-patient.php" method="POST">
-        <input type="hidden" name="id" value="<?= $user['id'] ?>">
-        
-        <label for="lastName">Last Name:</label>
-        <input type="text" id="lastname" name="lastname" value="<?= $user['lastname'] ?>" required><br>
-
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstname" name="firstname" value="<?= $user['firstname'] ?>" required><br>
-
-        <label for="birthdate">Birthdate:</label>
-        <input type="date" id="birthdate" name="birthdate" value="<?= $user['birthdate'] ?>" required><br>
-
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" value="<?= $user['phone'] ?>" required><br>
-
-        <label for="mail">Email:</label>
-        <input type="email" id="mail" name="mail" value="<?= $user['mail'] ?>" required><br>
-
-        <button type="submit">Update Patient</button>
-    </form>
-</div>
-
-<script>
-    // Function to show the edit form
-    function showEditForm() {
-        var form = document.getElementById('editForm');
-        form.style.display = form.style.display === 'none' ? 'block' : 'none';
-    }
-</script>
 
 
 
