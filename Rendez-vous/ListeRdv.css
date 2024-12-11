@@ -1,0 +1,77 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style général pour le body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Style pour le titre principal */
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Style pour la liste ordonnée */
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+}
+
+/* Style pour les éléments de la liste */
+li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+/* Style pour les liens */
+a {
+    text-decoration: none;
+    color: #007bff;
+    margin-left: 10px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Style pour le lien de retour à la page index */
+a[href='../index.php'] {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Style pour le lien d'ajout de rendez-vous */
+a[href='./ajout-rendezvous.php'] {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+a[href='./ajout-rendezvous.php']:hover {
+    background-color: #218838;
+}
+
+/* Style pour les éléments de rendez-vous */
+li + a {
+    font-size: 0.9em;
+    color: #007bff;
+    margin-left: 10px;
+}
+

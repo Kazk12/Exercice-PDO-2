@@ -27,6 +27,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -36,7 +37,9 @@ try {
 
 <a href="./liste-patients.php">Views all patients</a>
 
-<a href="./profil-patient.php">View patient</a>
+
+
+<a href="./Rendez-vous/liste-rdv.php">View all rdv</a>
 
 
 

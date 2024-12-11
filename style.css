@@ -1,0 +1,129 @@
+/* Style général de la page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Liens principaux (en haut de la page) */
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Effet au survol des liens */
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Titre de la page */
+h1, h2 {
+    color: #333;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Style des boutons */
+button {
+    background-color: #28a745;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Formulaire de modification (caché par défaut) */
+#editForm {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Style des champs dans le formulaire */
+#editForm label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+#editForm input[type="datetime-local"],
+#editForm select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Style du bouton dans le formulaire */
+#editForm button {
+    background-color: #007bff;
+    padding: 12px 20px;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#editForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Liste des patients (s'il y en a) */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Messages d'erreur */
+.error-message {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style des liens principaux pour navigation */
+a {
+    font-size: 1rem;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+}

@@ -27,6 +27,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./listePatients.css">
 </head>
 
 <body>
@@ -44,7 +45,7 @@ try {
         <?php
         foreach ($patients as $patient) {
         ?>
-            <li>Nom : <?= $patient['firstname']  ?> | Prénom : <?= $patient['lastname']  ?>   </li>
+            <li>Nom : <?= $patient['lastname']  ?>     |     Prénom : <?= $patient['firstname']  ?>   </li>
             <a href="./profil-patient.php?numeroId=<?= $patient["id"] ?>">Voir le profil</a>
 
 

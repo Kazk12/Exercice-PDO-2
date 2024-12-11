@@ -1,0 +1,83 @@
+/* Style global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Liens principaux */
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+a:hover {
+    background-color: #0056b3;
+}
+
+/* Titre principal */
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Liste des patients */
+ol {
+    padding-left: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+ol li {
+    margin-bottom: 10px;
+}
+
+/* Style des liens de "Voir le profil" */
+ol a {
+    color: #ffffff; /* Texte en blanc */
+    text-decoration: none;
+    font-size: 1rem;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Changement de couleur au survol */
+ol a:hover {
+    color: #ff4500; /* Change la couleur en orange vif au survol */
+}
+
+/* Style des liens de création de patient */
+a[href='./create_user.php'] {
+    background-color: #28a745;
+    margin-right: 10px;
+}
+
+a[href='./index.php'] {
+    background-color: #17a2b8;
+}
+
+/* Espacement entre les liens */
+a:hover {
+    opacity: 0.8;
+}
+
+/* Nouveau style pour les liens de "Voir le profil" */
+ol a {
+    font-weight: bold; /* Ajoute un peu de poids pour la lisibilité */
+}
+
